@@ -2,8 +2,8 @@
 //  FrameBuffer.h
 //
 #pragma once
-#include <vulkan/vulkan.h>
 #include "Image.h"
+#include <vulkan/vulkan.h>
 
 class DeviceContext;
 
@@ -12,32 +12,34 @@ class DeviceContext;
 FrameBuffer
 ====================================================
 */
-class FrameBuffer {
+class FrameBuffer
+{
 public:
-	FrameBuffer() {}
-	~FrameBuffer() {}
+    FrameBuffer() {}
+    ~FrameBuffer() {}
 
-	struct CreateParms_t {
-		int width;
-		int height;
-		bool hasDepth;
-		bool hasColor;
-	};
+    struct CreateParms_t
+    {
+        int  width;
+        int  height;
+        bool hasDepth;
+        bool hasColor;
+    };
 
-	bool Create( DeviceContext * device, CreateParms_t & parms );
-	void Cleanup( DeviceContext * device );
+    bool Create(DeviceContext* device, CreateParms_t& parms);
+    void Cleanup(DeviceContext* device);
 
-	void BeginRenderPass( DeviceContext * device, const int cmdBufferIndex );
-	void EndRenderPass( DeviceContext * device, const int cmdBufferIndex );
+    void BeginRenderPass(DeviceContext* device, const int cmdBufferIndex);
+    void EndRenderPass(DeviceContext* device, const int cmdBufferIndex);
 
-	CreateParms_t			m_parms;
+    CreateParms_t m_parms;
 
-	Image					m_imageDepth;
-	Image					m_imageColor;
+    Image m_imageDepth;
+    Image m_imageColor;
 
-	VkFramebuffer			m_vkFrameBuffer;
-	VkRenderPass			m_vkRenderPass;
+    VkFramebuffer m_vkFrameBuffer;
+    VkRenderPass  m_vkRenderPass;
 
 private:
-	bool CreateRenderPass( DeviceContext * device );
+    bool CreateRenderPass(DeviceContext* device);
 };

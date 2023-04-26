@@ -2,36 +2,38 @@
 //  Image.h
 //
 #pragma once
-#include <vulkan/vulkan.h>
 #include "DeviceContext.h"
+#include <vulkan/vulkan.h>
 
 /*
 ====================================================
 Image
 ====================================================
 */
-class Image {
+class Image
+{
 public:
-	Image() {}
-	~Image() {}
+    Image() {}
+    ~Image() {}
 
-	struct CreateParms_t {
-		VkImageUsageFlags usageFlags;
-		VkFormat format;
-		int width;
-		int height;
-		int depth;
-	};
+    struct CreateParms_t
+    {
+        VkImageUsageFlags usageFlags;
+        VkFormat          format;
+        int               width;
+        int               height;
+        int               depth;
+    };
 
-	bool Create( DeviceContext * device, const CreateParms_t & parms );
-	void Cleanup( DeviceContext * device );
-	void TransitionLayout( DeviceContext * device );
-	void TransitionLayout( VkCommandBuffer cmdBuffer, VkImageLayout newLayout );
+    bool Create(DeviceContext* device, const CreateParms_t& parms);
+    void Cleanup(DeviceContext* device);
+    void TransitionLayout(DeviceContext* device);
+    void TransitionLayout(VkCommandBuffer cmdBuffer, VkImageLayout newLayout);
 
-	CreateParms_t	m_parms;
-	VkImage			m_vkImage;
-	VkImageView		m_vkImageView;
-	VkDeviceMemory	m_vkDeviceMemory;
+    CreateParms_t  m_parms;
+    VkImage        m_vkImage;
+    VkImageView    m_vkImageView;
+    VkDeviceMemory m_vkDeviceMemory;
 
-	VkImageLayout	m_vkImageLayout;
+    VkImageLayout m_vkImageLayout;
 };

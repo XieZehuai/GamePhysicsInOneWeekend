@@ -2,10 +2,10 @@
 //	Body.h
 //
 #pragma once
-#include "../Math/Vector.h"
-#include "../Math/Quat.h"
-#include "../Math/Matrix.h"
 #include "../Math/Bounds.h"
+#include "../Math/Matrix.h"
+#include "../Math/Quat.h"
+#include "../Math/Vector.h"
 #include "Shapes.h"
 
 #include "../Renderer/model.h"
@@ -16,12 +16,13 @@
 Body
 ====================================================
 */
-class Body {
+class Body
+{
 public:
-	Body();
+    Body();
 
-	Vec3		m_position;
-	Quat		m_orientation;
+    Vec3 m_position;
+    Quat m_orientation;
 
-	Shape *		m_shape;
+    Shape* m_shape;
 };

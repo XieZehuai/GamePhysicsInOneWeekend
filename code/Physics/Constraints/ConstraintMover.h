@@ -9,11 +9,12 @@
 ConstraintMoverSimple
 ====================================================
 */
-class ConstraintMoverSimple : public Constraint {
+class ConstraintMoverSimple : public Constraint
+{
 public:
-	ConstraintMoverSimple() : Constraint(), m_time( 0 ) {}
+    ConstraintMoverSimple() : Constraint(), m_time(0) {}
 
-	void PreSolve( const float dt_sec ) override;
+    void PreSolve(const float dt_sec) override;
 
-	float m_time;
+    float m_time;
 };

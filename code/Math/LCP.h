@@ -2,13 +2,12 @@
 //	LCP.h
 //
 #pragma once
-#include "Vector.h"
 #include "Matrix.h"
-
+#include "Vector.h"
 
 /*
 ====================================================
 LCP_GaussSeidel
 ====================================================
 */
-VecN LCP_GaussSeidel( const MatN & A, const VecN & b );
+VecN LCP_GaussSeidel(const MatN& A, const VecN& b);

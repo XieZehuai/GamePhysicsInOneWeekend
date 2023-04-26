@@ -8,6 +8,7 @@
 ResolveContact
 ====================================================
 */
-void ResolveContact( contact_t & contact ) {
-	// TODO: Add Code
+void ResolveContact(contact_t& contact)
+{
+    // TODO: Add Code
 }

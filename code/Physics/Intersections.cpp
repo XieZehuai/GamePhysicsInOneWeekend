@@ -9,10 +9,11 @@
 Intersect
 ====================================================
 */
-bool Intersect( Body * bodyA, Body * bodyB, contact_t & contact ) {
-	// TODO: Add Code
+bool Intersect(Body* bodyA, Body* bodyB, contact_t& contact)
+{
+    // TODO: Add Code
 
-	return false;
+    return false;
 }
 
 /*
@@ -20,30 +21,9 @@ bool Intersect( Body * bodyA, Body * bodyB, contact_t & contact ) {
 Intersect
 ====================================================
 */
-bool Intersect( Body * bodyA, Body * bodyB, const float dt, contact_t & contact ) {
-	// TODO: Add Code
+bool Intersect(Body* bodyA, Body* bodyB, const float dt, contact_t& contact)
+{
+    // TODO: Add Code
 
-	return false;
+    return false;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
