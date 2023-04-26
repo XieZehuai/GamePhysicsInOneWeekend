@@ -404,9 +404,9 @@ void Application::MouseMoved(float x, float y)
     Vec2 ds          = newPosition - m_mousePosition;
     m_mousePosition  = newPosition;
 
-    float sensitivity = 0.01f;
-    m_cameraPositionTheta += ds.y * sensitivity;
-    m_cameraPositionPhi += ds.x * sensitivity;
+    float sensitivity = 0.0025f;
+    m_cameraPositionTheta -= ds.y * sensitivity;
+    m_cameraPositionPhi -= ds.x * sensitivity;
 
     if (m_cameraPositionTheta < 0.14f)
     {
