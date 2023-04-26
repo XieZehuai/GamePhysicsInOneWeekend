@@ -461,6 +461,13 @@ Application::Keyboard
 */
 void Application::Keyboard(int key, int scancode, int action, int modifiers)
 {
+    // close window when press esc
+    if (GLFW_KEY_ESCAPE == key && GLFW_PRESS == action)
+    {
+        glfwSetWindowShouldClose(m_glfwWindow, GLFW_TRUE);
+        return;
+    }
+
     if (GLFW_KEY_R == key && GLFW_RELEASE == action)
     {
         m_scene->Reset();
